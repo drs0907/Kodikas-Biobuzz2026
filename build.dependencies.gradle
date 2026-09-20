@@ -1,6 +1,11 @@
 repositories {
     mavenCentral()
-    google() // Needed for androidx
+    google()
+    maven { url = 'https://jitpack.io' }
+    maven { url 'https://repo.dairy.foundation/releases/'}
+    flatDir {
+        dirs '../libs'
+    }
 }
 
 dependencies {
@@ -13,5 +18,14 @@ dependencies {
     implementation 'org.firstinspires.ftc:FtcCommon:12.0.0'
     implementation 'org.firstinspires.ftc:Vision:12.0.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
+    
+    // FTCLib
+    implementation 'com.arcrobotics.ftclib:core:2.1.1'
+    implementation 'com.arcrobotics.ftclib:hardware:2.1.1'
+    
+    // PedroPathing
+    implementation 'com.github.pedropathing:pedropathing:0.5.2'
+    
+    // Panels
+    implementation 'com.github.PanelsFTC:Panels:1.0.0'
 }
-
